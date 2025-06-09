@@ -26,11 +26,11 @@ jobs:
       #   run: npm test
 
       - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@v2
+        # uses: SonarSource/sonarqube-scan-action@v2
+        run: sonar-scanner -X
         with:
           host-url: 'http://10.0.0.61:9000'
           project-key: 'test-sonar-node'
           project-name: 'Test Sonar Node Example'
-        run: sonar-scanner -X
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
