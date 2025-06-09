@@ -30,6 +30,6 @@ jobs:
         with:
           host-url: 'http://10.0.0.61:9000'
           project-key: 'test-sonar-node'
-          project-name: 'test-sonar-node'
+          project-name: 'Test Sonar Node Example'
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
