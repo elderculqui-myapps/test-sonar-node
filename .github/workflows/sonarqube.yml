@@ -28,7 +28,7 @@ jobs:
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v2
         with:
-          host-url: 'http://10.0.0.61:9000'
+          host-url: 'http://sonarqube.myapps.com.pe'
           project-key: 'test-sonar-node'
           project-name: 'Test Sonar Node Example'
         env:
