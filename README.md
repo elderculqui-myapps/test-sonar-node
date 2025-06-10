@@ -2,4 +2,4 @@
 
 Test sonar node
 
-### probando un pipeline en drone
+### probando un pipeline en github para metricas de dora
