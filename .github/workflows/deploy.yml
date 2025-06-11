@@ -44,6 +44,8 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
+            export NEXUS_USERNAME=${{ secrets.NEXUS_USERNAME }}
+            export NEXUS_PASSWORD=${{ secrets.NEXUS_PASSWORD }}
             mkdir -p /root/testsonarnode
             chmod +x /root/testsonarnode/deploy.sh
             /root/testsonarnode/deploy.sh
