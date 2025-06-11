@@ -35,7 +35,7 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           source: "./deploy.sh"
-          target: "/home/${{ secrets.VPS_USER }}/"
+          target: "/${{ secrets.VPS_USER }}/testsonarnode/"
 
       - name: Run deploy script via SSH
         uses: appleboy/ssh-action@v1.0.0
@@ -44,5 +44,6 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            chmod +x ~/deploy.sh
-            ~/deploy.sh
+            mkdir -p /root/testsonarnode
+            chmod +x /root/testsonarnode/deploy.sh
+            /root/testsonarnode/deploy.sh
