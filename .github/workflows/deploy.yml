@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Debug secrets (temporal)
+        run: |
+          echo "Registry: ${{ secrets.NEXUS_REGISTRY }}"
+          echo "User: ${{ secrets.NEXUS_USERNAME }}"
+          echo "Password is set: ${{ secrets.NEXUS_PASSWORD != '' }}"
       - name: Checkout code
         uses: actions/checkout@v3
 
