@@ -3,3 +3,8 @@ function saludo(nombre) {
 }
 
 console.log(saludo("Mundo"));
+
+console.log("Hello");
+console.log("Hello");
+
+const unusedVar = 42;
